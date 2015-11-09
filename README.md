@@ -1,7 +1,8 @@
 # dragonfruit
 Webpack Loader that exports __namespaced__ css `:local` classNames
 
-__NPM__ `npm install dragonfruit --save`
+#Installation
+`npm install dragonfruit --save-dev`
 
 ## e.g.
 
@@ -54,7 +55,7 @@ module.exports = React.createClass({
 ```
 # Usage
 
-In your `webpack.config.js`
+In your `webpack.config.js`:
 
 ```javascript
 
@@ -69,3 +70,29 @@ module.exports = {
 };
 
 ```
+
+From API:
+
+Any Strings, Objects, Functions, Arrays, Nested Arrays, etc. of `classNames`
+
+## e.g.
+
+```javascript
+var styles = require("./datepicker.css");
+
+styles("day")                                                                       -> "hr486_eio"
+styles(["day"])                                                                     -> "hr486_eio"
+styles([["day"]])                                                                   -> "hr486_eio"
+styles({"day":true})                                                                -> "hr486_eio"
+styles(function(classNamesAvailable){return "day"})                                 -> "hr486_eio"
+styles(function(classNamesAvailable){return [{"day":true}]})                        -> "hr486_eio"
+
+styles("day", "week")                                                               -> "hr486_eio iooi676_5hj"
+styles(["day", "week"])                                                             -> "hr486_eio iooi676_5hj"
+styles([["day",[[, "week"]]]])                                                      -> "hr486_eio iooi676_5hj"
+styles({"day":true, "week":true, month:false})                                      -> "hr486_eio iooi676_5hj"
+styles(function(classNamesAvailable){return ["day", {"week": true, month:false}]})  -> "hr486_eio iooi676_5hj"
+
+```
+
+
