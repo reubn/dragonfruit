@@ -1,0 +1,27 @@
+{
+  "name": "dragonfruit",
+  "version": "0.0.0",
+  "description": "Webpack ClassName Exports",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reubn/dragonfruit.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "webpack-loader",
+    "css",
+    "react",
+    "namespace"
+  ],
+  "author": "Reuben Eggar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reubn/dragonfruit/issues"
+  },
+  "homepage": "https://github.com/reubn/dragonfruit#readme"
+}
