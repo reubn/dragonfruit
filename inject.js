@@ -1,17 +1,14 @@
-if (process.env.NODE_ENV === "development") console.log("Content:", content);
 //For Testing
-var content=content||{locals:{}}
+if(process.execPath) var content=content||{locals:{}}
 
 module.exports = function() {
   var classNameMappings = content.locals;
 
   return function() {
     //For Testing
-    var classNameMappings = classNameMappings||this
+    if(process.execPath) classNameMappings=this
 
     var arrayOfClassNames = extractClassNames(arguments);
-    if (process.env.NODE_ENV === "development") console.log("arguments:", arguments);
-    if (process.env.NODE_ENV === "development") console.log("arrayOfClassNames:", arrayOfClassNames);
 
     //If we have classNames, return className string
     if (arrayOfClassNames !== false) return arrayOfClassNames.map(function(className) {
