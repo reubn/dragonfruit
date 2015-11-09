@@ -1,6 +1,6 @@
 {
   "name": "dragonfruit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Webpack ClassName Exports",
   "main": "index.js",
   "scripts": {
