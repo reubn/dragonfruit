@@ -49,7 +49,6 @@ module.exports = function() {
       if (Object.prototype.toString.call(args[0]) === "[object Function]") return extractClassNames([args[0](classNameMappings)]);
     } else {
       //classNames are arguments
-      console.log(args)
       return [].concat.apply([], args.map(function(arg) {
         return extractClassNames([arg]);
       }));
