@@ -1,7 +1,14 @@
 if (process.env.NODE_ENV === "development") console.log("Content:", content);
+//For Testing
+var content=content||{locals:{}}
+
 module.exports = function() {
   var classNameMappings = content.locals;
+
   return function() {
+    //For Testing
+    var classNameMappings = classNameMappings||this
+
     var arrayOfClassNames = extractClassNames(arguments);
     if (process.env.NODE_ENV === "development") console.log("arguments:", arguments);
     if (process.env.NODE_ENV === "development") console.log("arrayOfClassNames:", arrayOfClassNames);
@@ -15,7 +22,13 @@ module.exports = function() {
     return classNameMappings[Object.keys(classNameMappings)[0]];
   }
 
-  function extractClassNames(args) {
+  function extractClassNames(argsObj) {
+    //Convert Object to Array
+    var args = new Array(argsObj.length);
+    for(var i = 0; i < args.length; ++i) {
+        args[i] = argsObj[i];
+    }
+
     //No args supplied
     if (!args.length) return false;
 
@@ -36,6 +49,7 @@ module.exports = function() {
       if (Object.prototype.toString.call(args[0]) === "[object Function]") return extractClassNames([args[0](classNameMappings)]);
     } else {
       //classNames are arguments
+      console.log(args)
       return [].concat.apply([], args.map(function(arg) {
         return extractClassNames([arg]);
       }));
