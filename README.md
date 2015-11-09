@@ -1,4 +1,4 @@
-# dragonfruit
+# dragonfruit [![Build Status](https://travis-ci.org/reubn/dragonfruit.svg?branch=master)](https://travis-ci.org/reubn/dragonfruit)
 Webpack Loader that exports __namespaced__ css `:local` classNames
 
 #Installation
