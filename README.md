@@ -1,4 +1,4 @@
-# dragonfruit [![Build Status](https://travis-ci.org/reubn/dragonfruit.svg?branch=master)](https://travis-ci.org/reubn/dragonfruit)
+# dragonfruit [![Build Status](https://travis-ci.org/reubn/dragonfruit.svg?branch=master)](https://travis-ci.org/reubn/dragonfruit) [![npm](https://img.shields.io/npm/v/dragonfruit.svg)](https://www.npmjs.com/package/dragonfruit) [![David](https://img.shields.io/david/reubn/dragonfruit.svg)](https://github.com/reubn/dragonfruit/blob/master/package.json) [![David](https://img.shields.io/david/reubn/dragonfruit.svg)](https://github.com/reubn/dragonfruit/blob/master/package.json)
 Webpack Loader that exports __namespaced__ css `:local` classNames
 
 #Installation
