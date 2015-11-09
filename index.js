@@ -24,16 +24,19 @@ module.exports = function(content) {
           //classNames are an array
           if (Array.isArray(args[0])) return extractClassNames(args[0], true);
 
+          //classNames are an object
+          if (Object.prototype.toString.call(args[0]) === "[object Object]") return extractClassNames(Object.keys(args[0]).filter(function(key){return !!args[0][key]}), true);
+
           //One className as string
           if (typeof args[0] === "string") return noWrap?args[0]:[args[0]];
 
           //classNames returned by function
-          if (Object.prototype.toString.call(args[0]) === "[object Function]") return extractClassNames([args[0](classNameMappings)]);
+          if (Object.prototype.toString.call(args[0]) === "[object Function]") return extractClassNames([args[0](classNameMappings)], true);
         } else {
           //classNames are arguments
-          return args.map(function(arg) {
+          return [].concat.apply([],args.map(function(arg) {
             return extractClassNames([arg], true);
-          });
+          }));
         }
       }
 
