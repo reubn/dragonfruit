@@ -1,5 +1,5 @@
 # dragonfruit [![Build Status](https://travis-ci.org/reubn/dragonfruit.svg?branch=master)](https://travis-ci.org/reubn/dragonfruit) [![npm](https://img.shields.io/npm/v/dragonfruit.svg)](https://www.npmjs.com/package/dragonfruit) [![David](https://img.shields.io/david/reubn/dragonfruit.svg)](https://github.com/reubn/dragonfruit/blob/master/package.json) [![David](https://img.shields.io/david/dev/reubn/dragonfruit.svg)](https://github.com/reubn/dragonfruit/blob/master/package.json)
-Webpack Loader that exports __namespaced__ css `:local` classNames
+Webpack Loader for Syntactic Sugar Over Namespaced CSS
 
 #Installation
 `npm install dragonfruit --save-dev`
@@ -9,7 +9,7 @@ Webpack Loader that exports __namespaced__ css `:local` classNames
 ### CSS
 
 ```css
-:local(.datepicker)
+.datepicker
       {
         display: block;
         color: black;
@@ -25,7 +25,7 @@ module.exports = React.createClass({
   render: function() {
     return 
       <div className={styles("datepicker")}>
-       // This ^^ will contain a random namespaced hash that corresponds with the css class ":local(.datepicker)"
+       // This ^^ will contain a random namespaced hash that corresponds with the css class ".datepicker"
       </div>
   }
 });
@@ -34,7 +34,7 @@ module.exports = React.createClass({
 ### __Would Be Transformed To__
 
 ```css
-.kg64jk3l(.datepicker)
+.kg64jk3l
       {
         display: block;
         color: black;
@@ -63,7 +63,7 @@ module.exports = {
     ...
     module: {
         loaders: [
-            {test: /\.css$/, loader: "dragonfruit!style!css"}
+            {test: /\.css$/, loader: "dragonfruit!style!css?modules=true"}
         ]
     }
     ...
