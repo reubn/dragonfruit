@@ -23,7 +23,7 @@ var styles = require("./datepicker.css");
 
 module.exports = React.createClass({
   render: function() {
-    return 
+    return
       <div className={styles("datepicker")}>
        // This ^^ will contain a random namespaced hash that corresponds with the css class ".datepicker"
       </div>
@@ -47,7 +47,7 @@ var styles = require("./datepicker.css");
 
 module.exports = React.createClass({
   render: function() {
-    return 
+    return
       <div className="kg64jk3l">
       </div>
   }
@@ -87,6 +87,7 @@ styles({"day":true})                                                            
 styles(function(classNamesAvailable){return "day"})                                 -> "hr486_eio"
 styles(function(classNamesAvailable){return [{"day":true}]})                        -> "hr486_eio"
 
+styles("day week")                                                                  -> "hr486_eio iooi676_5hj"
 styles("day", "week")                                                               -> "hr486_eio iooi676_5hj"
 styles(["day", "week"])                                                             -> "hr486_eio iooi676_5hj"
 styles([["day",[[, "week"]]]])                                                      -> "hr486_eio iooi676_5hj"
@@ -94,5 +95,3 @@ styles({"day":true, "week":true, month:false})                                  
 styles(function(classNamesAvailable){return ["day", {"week": true, month:false}]})  -> "hr486_eio iooi676_5hj"
 
 ```
-
-

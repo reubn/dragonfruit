@@ -298,6 +298,10 @@ describe("Handling of single inputs", function() {
 
 
 describe("Handling of multiple inputs", function() {
+  it("correctly translates single input of multiple strings", function() {
+    expect(dragonfruitInject("AF AX")).toBe("FA XA");
+  });
+
   it("correctly translates multiple inputs of String", function() {
     expect(dragonfruitInject("AF", "AX")).toBe("FA XA");
   });

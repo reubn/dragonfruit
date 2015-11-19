@@ -40,7 +40,7 @@ module.exports = function() {
       }));
 
       //One className as string
-      if (typeof args[0] === "string") return [args[0]];
+      if (typeof args[0] === "string") return args[0].split(" ");
 
       //classNames returned by function
       if (Object.prototype.toString.call(args[0]) === "[object Function]") return extractClassNames([args[0](classNameMappings)]);
