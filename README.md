@@ -1,7 +1,7 @@
 # dragonfruit [![Build Status](https://travis-ci.org/reubn/dragonfruit.svg?branch=master)](https://travis-ci.org/reubn/dragonfruit) [![npm](https://img.shields.io/npm/v/dragonfruit.svg)](https://www.npmjs.com/package/dragonfruit) [![David](https://img.shields.io/david/reubn/dragonfruit.svg)](https://github.com/reubn/dragonfruit/blob/master/package.json) [![David](https://img.shields.io/david/dev/reubn/dragonfruit.svg)](https://github.com/reubn/dragonfruit/blob/master/package.json)
 Webpack Loader for Syntactic Sugar Over Namespaced CSS
 
-#Installation
+# Installation
 `npm install dragonfruit --save-dev`
 
 ## e.g.
